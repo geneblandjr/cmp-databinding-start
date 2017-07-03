@@ -9,21 +9,21 @@ export class CockpitComponent implements OnInit {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
 // Example of how to create an output alias:
   @Output('bpCreated') blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-  newServerName = '';
+//  newServerName = '';
   newServerContent = '';
   constructor() { }
 
   ngOnInit() {
   }
-  onAddServer() {
+  onAddServer(nameInput: HTMLInputElement) {
     this.serverCreated.emit({
-        serverName: this.newServerName,
+        serverName: nameInput.value, // <-- example of template reference input.
         serverContent: this.newServerContent
     });
   }
-  onAddBlueprint() {
+  onAddBlueprint(nameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
-        serverName: this.newServerName,
+        serverName: nameInput.value, // <-- example of template reference input.
         serverContent: this.newServerContent
     });
   }

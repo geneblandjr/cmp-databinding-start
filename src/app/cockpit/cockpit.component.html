@@ -7,7 +7,12 @@
              class="form-control"
              #nameInput >
       <label>Server Content</label>
-      <input type="text" class="form-control" [(ngModel)]="newServerContent">
+<!--      <input type="text" class="form-control" [(ngModel)]="newServerContent">-->
+<!--        Example of using ViewChild Decorator to pass local reference variable and pass data.-->
+      <input
+             type="text"
+             class="form-control"
+             #serverContentInput>
       <br>
       <button
         class="btn btn-primary"

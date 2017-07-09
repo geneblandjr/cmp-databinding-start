@@ -2,10 +2,14 @@
     class="panel panel-default">
     <div class="panel-heading">{{ element.name }}</div>
     <div class="panel-body">
+<!--
         <p>
             <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
             <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
         </p>
+-->
+<!--        Example of use of ng-content to pull in content from the "hosting" page - in this case the app.component.html-->
+        <ng-content></ng-content>
     </div>
 </div>
 
